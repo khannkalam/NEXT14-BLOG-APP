@@ -12,15 +12,15 @@ const Navbar = () => {
       <div className={styles.social}>
        <Image src="/facebook.png" alt='facebook' width={34} height={34}/> 
        <Image src="/instagram.png" alt='instagram' width={34} height={34}/> 
-       <Image src="/github.png" alt='github' width={34} height={34}/> 
+       <Image src="/github2.png" alt='github' width={30} height={30}/> 
        <Image src="/linkedin.png" alt='linkedIn' width={34} height={34}/> 
       
       </div>
-      <div className={styles.logo}> <Image src="/pixelplanet3.png" alt='linkedIn' width={280} height={220}/> 
+      <div className={styles.logo}> <Image src="/pixelplanet.png" alt='linkedIn' width={200} height={200}/> 
       </div>
       <div className={styles.links}>
         <ThemeToggle/>
-      <Link href="/" className={styles.link} >Homepage</Link>
+      <Link href="/" className={styles.link} >Home</Link>
       <Link href="/" className={styles.link} >Contact</Link>
       <Link href="/" className={styles.link} >About</Link>
       <AuthLinks/>

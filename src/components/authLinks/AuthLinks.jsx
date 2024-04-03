@@ -1,26 +1,51 @@
-import React from 'react'
-import styles from "./authLinks.module.css"
-import Link from 'next/link'
+"use client";
 
+import React, { useState } from "react";
+import styles from "./authLinks.module.css";
+import Link from "next/link";
 
 const AuthLinks = () => {
-  
-  const status= "authenticated"
-  
-  return (
-  <>
-  {status === "authenticated" ? (
-    <Link href="/login">Login</Link>
-  ) : (<>
-    <Link href="/writr">Write</Link>
-    <span className={styles.link}>Logout</span>
-  </>
-  ) }
-  
-  
-  
-  </>
-  )
-}
+  const [open, setOpen] = useState(false);
 
-export default AuthLinks
+  const status = "authenticated";
+
+  return (
+    <>
+      {status === "authenticated" ? (
+        <Link href="/login" className={styles.link}  >Login</Link>
+      ) : (
+        <>
+          <Link href="/writr" className={styles.link} >Write</Link>
+          <span className={styles.link}>Logout</span>
+        </>
+      )}
+
+      <div className={styles.burger} onClick={()=>setOpen(!open)}>
+        <div className={styles.line}></div>
+        <div className={styles.line}></div>
+        <div className={styles.line}></div>
+      </div>
+      {open && (
+       
+        <div className={styles.responsiveMenu}>
+       
+      <Link href="/">Home</Link>
+      <Link href="/">Contact</Link>
+      <Link href="/">About</Link>
+      {status === "authenticated" ? (
+        <Link href="/login">Login</Link>
+      ) : (
+        <>
+          <Link href="/writr">Write</Link>
+          <span className={styles.link}>Logout</span>
+        </>
+      )}
+
+      </div>
+      )}
+    
+    </>
+  );
+};
+
+export default AuthLinks;

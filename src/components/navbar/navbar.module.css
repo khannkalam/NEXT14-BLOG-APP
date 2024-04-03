@@ -5,6 +5,7 @@ justify-content: space-between;
 align-items: center;
 height: 100px;
 
+
 }
 
 .social{
@@ -17,8 +18,9 @@ flex: 1;
 
 .logo{
    
-    flex: 1;
-
+   flex: 1;
+   align-items: center;
+    margin-top: 3.5rem;
 
 }
 
@@ -46,14 +48,21 @@ flex: 1;
   
 
 .logo{
-    font-size: 24px;
+  
+margin-top: 5rem;
+  
 
 }
 
 }
 @media screen and (max-width: 640px) {
   
+.links{
 
+justify-content: flex-end;
+
+
+}
 .link{
     display: none;
 

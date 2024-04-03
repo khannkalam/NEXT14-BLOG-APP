@@ -1,10 +1,10 @@
 
 :root{
 
---bg:white
---textColor:black
+--bg:white;
+--textColor:black;
 --softbg:#f0f0f0;
---softTextColor:#626262
+--softTextColor:#626262;
 }
 
 *{
@@ -32,7 +32,7 @@ text-decoration: none;
 --bg:#0f172a;
 --textColor:#ddd;
 --softBg:0f173a;
---softTextColor:#a6a6a6
+--softTextColor:#a6a6a6;
 
 
 }
