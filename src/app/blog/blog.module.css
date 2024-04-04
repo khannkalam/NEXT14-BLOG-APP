@@ -1,0 +1,25 @@
+
+.title{
+    background-color: coral;
+    color: white;
+    margin-top: 5rem;
+    padding: 55px 10px;
+    text-align: center;
+    text-transform: capitalize;
+  }
+  
+  .content{
+    display: flex;
+    gap: 50px;
+  }
+  
+
+  @media screen and (max-width: 640px) {
+  
+    .title{
+     
+        padding: 15px 10px;
+        
+      }
+    
+    }
