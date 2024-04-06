@@ -22,27 +22,27 @@
   border-radius: 10px;
 }
 
-.category.valorant {
+.category.fps {
   background-color: #57c4ff31;
 }
 
-.category.gtaV {
+.category.openworld {
   background-color: #da85c731;
 }
 
-.category.fifa {
+.category.storymode {
   background-color: #7fb88133;
 }
 
-.category.Apex {
+.category.arcade {
   background-color: #ff795736;
 }
 
-.category.CounterStrike {
+.category.rpg {
   background-color: #ffb04f45;
 }
 
-.category.warzone {
+.category.sports {
   background-color: #5e4fff31;
 }
 

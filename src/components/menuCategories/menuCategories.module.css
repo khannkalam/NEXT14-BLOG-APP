@@ -12,26 +12,26 @@
     font-size: 14px;
   }
   
-  .categoryItem.valorant {
+  .categoryItem.fps {
     background-color: #57c4ff31;
   }
   
-  .categoryItem.fifa {
+  .categoryItem.storymode {
     background-color: #da85c731;
   }
   
-  .categoryItem.gtav {
+  .categoryItem.sports {
     background-color: #7fb88133;
   }
   
-  .categoryItem.warzone {
+  .categoryItem.arcade {
     background-color: #ff795736;
   }
   
-  .categoryItem.apex {
+  .categoryItem.rpg {
     background-color: #ffb04f45;
   }
   
-  .categoryItem.counterstrike {
+  .categoryItem.openworld {
     background-color: #5e4fff31;
   }

@@ -7,24 +7,24 @@ const MenuCategories = () => {
     <div className={styles.categoryList}>
       <Link
         href="/blog?cat=style"
-        className={`${styles.categoryItem} ${styles.valorant}`}
+        className={`${styles.categoryItem} ${styles.fps}`}
       >
-        Valorant
+        FPS
       </Link>
-      <Link href="/blog" className={`${styles.categoryItem} ${styles.counterstrike}`}>
-        Counter Strike
+      <Link href="/blog" className={`${styles.categoryItem} ${styles.openworld}`}>
+        Open World
       </Link>
-      <Link href="/blog" className={`${styles.categoryItem} ${styles.gtav}`}>
-        Gta V
+      <Link href="/blog" className={`${styles.categoryItem} ${styles.storymode}`}>
+        Story Mode
       </Link>
-      <Link href="/blog" className={`${styles.categoryItem} ${styles.fifa}`}>
-        Fifa
+      <Link href="/blog" className={`${styles.categoryItem} ${styles.sports}`}>
+        Sports
       </Link>
-      <Link href="/blog" className={`${styles.categoryItem} ${styles.warzone}`}>
-        warzone
+      <Link href="/blog" className={`${styles.categoryItem} ${styles.arcade}`}>
+        Arcade
       </Link>
-      <Link href="/blog" className={`${styles.categoryItem} ${styles.apex}`}>
-        Apex Legends
+      <Link href="/blog" className={`${styles.categoryItem} ${styles.rpg}`}>
+      RPG
       </Link>
     </div>
   );
