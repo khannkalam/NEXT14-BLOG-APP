@@ -1,4 +1,5 @@
-
+.container {
+}
 
 .title {
   margin: 50px 0px;
@@ -26,28 +27,29 @@
   background-color: #57c4ff31;
 }
 
-.category.openworld {
+.category.story_Mode {
   background-color: #da85c731;
 }
 
-.category.storymode {
+.category.open_World {
   background-color: #7fb88133;
 }
 
-.category.arcade {
+.category.rpg {
   background-color: #ff795736;
 }
 
-.category.rpg {
+.category.sports {
   background-color: #ffb04f45;
 }
 
-.category.sports {
+.category.arcade {
   background-color: #5e4fff31;
 }
 
 .image {
   border-radius: 50%;
+  
 }
 
 @media screen and (max-width: 1280px) {

@@ -1,46 +1,45 @@
 import React from "react";
 import styles from "./categoryList.module.css";
 import Link from "next/link";
-import Image from "next/image"; 
-const CategoryList = () => {
+import Image from "next/image";
+
+const getData = async () => {
+  const res = await fetch("http://localhost:3000/api/categories", {
+    cache: "no-store",
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed");
+  }
+
+  return res.json();
+};
+
+const CategoryList = async () => {
+  const data = await getData();
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Popular Categories</h1>
       <div className={styles.categories}>
-       
-        <Link href="/blog?cat=valorant" className={`${styles.category} ${styles.fps}`}>
-
-          <Image src="/image.jpg" width={32} height={32} className={styles.image} /> FPS
-        
-        </Link>
-        <Link href="/blog?cat=gtaV" className={`${styles.category} ${styles.openworld}`}>
-
-          <Image src="/image.jpg" width={32} height={32} className={styles.image} /> Open World
-        
-        </Link>
-        <Link href="/blog?cat=Fifa" className={`${styles.category} ${styles.sports}`}> 
-
-          <Image src="/image.jpg" width={32} height={32} className={styles.image} /> Sports
-        
-        </Link>
-        <Link href="/blog?cat=Apex " className={`${styles.category} ${styles.storymode}`}> 
-
-          <Image src="/image.jpg" width={32} height={32} className={styles.image} /> Story Mode
-        
-        </Link>
-        <Link href="/blog?cat=CounterStrike" className={`${styles.category} ${styles.arcade}`}>
-
-          <Image src="/image.jpg" width={32} height={32} className={styles.image} /> Arcade
-        
-        </Link>
-        <Link href="/blog?cat=warzone" className={`${styles.category} ${styles.rpg}`}>
-
-          <Image src="/image.jpg" width={32} height={32} className={styles.image} /> RPG 
-        </Link>
-     
-
-        </div>
-     
+        {data?.map((item) => (
+          <Link
+            href="/blog?cat=storymode"
+            className={`${styles.category} ${styles[item.slug]}`}
+            key={item._id}
+          >
+            {item.img && (
+              <Image
+                src={item.img}
+                alt=""
+                width={32}
+                height={32}
+                className={styles.image}
+              />
+            )}
+            {item.title}
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };

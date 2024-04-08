@@ -1,26 +1,20 @@
-
-
-import CardList from "../../components/cardList/CardList"
-import Menu from "../../components/menu/Menu"
+import CardList from "@/components/cardList/CardList";
 import styles from "./blog.module.css"
+import Menu from "@/components/Menu/Menu";
 
+const BlogPage = ({ searchParams }) => {
+  const page = parseInt(searchParams.page) || 1;
+  const { cat } = searchParams;
 
-import React from 'react'
-
-const Blogpage = () => {
   return (
     <div className={styles.container}>
-    
-    <h1 className={styles.title}> Valorant Blog </h1>
-    <div className={styles.content}>
-     <CardList/>
-     <Menu/>   
+      <h1 className={styles.title}>{cat} Blog</h1>
+      <div className={styles.content}>
+        <CardList page={page} cat={cat}/>
+        <Menu />
+      </div>
     </div>
+  );
+};
 
-
-      
-    </div>
-  )
-}
-
-export default Blogpage
+export default BlogPage;

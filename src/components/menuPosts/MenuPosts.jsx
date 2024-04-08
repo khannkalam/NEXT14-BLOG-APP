@@ -9,11 +9,11 @@ const MenuPosts = ({ withImage }) => {
       <Link href="/" className={styles.item}>
         {withImage && (
           <div className={styles.imageContainer}>
-            <Image src="/image.jpg" alt="" fill className={styles.image} />
+            <Image src="/main.jpg" alt="" fill className={styles.image} />
           </div>
         )}
         <div className={styles.textContainer}>
-          <span className={`${styles.category} ${styles.valorant}`}>valorant</span>
+          <span className={`${styles.category} ${styles.storymode}`}>story mode</span>
           <h3 className={styles.postTitle}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </h3>
@@ -26,12 +26,12 @@ const MenuPosts = ({ withImage }) => {
       <Link href="/" className={styles.item}>
         {withImage && (
           <div className={styles.imageContainer}>
-            <Image src="/image.jpg" alt="" fill className={styles.image} />
+            <Image src="/fps.jpg" alt="" fill className={styles.image} />
           </div>
         )}
         <div className={styles.textContainer}>
-          <span className={`${styles.category} ${styles.warzone}`}>
-          Warzone
+          <span className={`${styles.category} ${styles.fps}`}>
+            fps
           </span>
           <h3 className={styles.postTitle}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -45,11 +45,11 @@ const MenuPosts = ({ withImage }) => {
       <Link href="/" className={styles.item}>
         {withImage && (
           <div className={styles.imageContainer}>
-            <Image src="/image.jpg" alt="" fill className={styles.image} />
+            <Image src="/openworld.jpg" alt="" fill className={styles.image} />
           </div>
         )}
         <div className={styles.textContainer}>
-          <span className={`${styles.category} ${styles.gtav}`}>Gta V</span>
+          <span className={`${styles.category} ${styles.openworld}`}>open world</span>
           <h3 className={styles.postTitle}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </h3>
@@ -62,12 +62,12 @@ const MenuPosts = ({ withImage }) => {
       <Link href="/" className={styles.item}>
         {withImage && (
           <div className={styles.imageContainer}>
-            <Image src="/image.jpg" alt="" fill className={styles.image} />
+            <Image src="/sports.jpg" alt="" fill className={styles.image} />
           </div>
         )}
         <div className={styles.textContainer}>
-          <span className={`${styles.category} ${styles.apex}`}>
-            Apex Legend
+          <span className={`${styles.category} ${styles.sports}`}>
+          sports
           </span>
           <h3 className={styles.postTitle}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.

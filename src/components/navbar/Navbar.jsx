@@ -16,7 +16,7 @@ const Navbar = () => {
        <Image src="/linkedin.png" alt='linkedIn' width={34} height={34}/> 
       
       </div>
-      <div className={styles.logo}> <Image src="/pixelplanet.png" alt='linkedIn' width={200} height={200}/> 
+      <div className={styles.logo}><Link href="/"><Image src="/pixelplanet.png" alt='linkedIn' width={200} height={200}/></Link>
       </div>
       <div className={styles.links}>
         <ThemeToggle/>

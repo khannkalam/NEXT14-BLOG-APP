@@ -6,7 +6,7 @@ const MenuCategories = () => {
   return (
     <div className={styles.categoryList}>
       <Link
-        href="/blog?cat=style"
+        href="/blog?cat=fps"
         className={`${styles.categoryItem} ${styles.fps}`}
       >
         FPS
