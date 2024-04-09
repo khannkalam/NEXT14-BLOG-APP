@@ -13,8 +13,9 @@
   }
   
   .title {
-    font-size: 64px;
-    margin-bottom: 50px;
+
+    font-size: 4rem;
+    margin-bottom: 60px;
   }
   
   .user {
@@ -48,28 +49,31 @@
   
   .imageContainer {
     flex: 1;
-    height: 350px;
+   
+    height: 35rem;
+   
     position: relative;
   }
   
   .image {
-    object-fit: cover;
+    margin-left: 6rem;
+    object-fit: contain;
   }
   
   .content {
     display: flex;
-    gap: 50px;
+    gap: 200px;
   }
   
   .post {
-    flex: 5;
+    flex: 4;
     margin-top: 60px;
   }
   
-  .description p {
-    font-size: 20px;
-    font-weight: 300;
-    margin-bottom: 20px;
+  .description p{
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 60px;
   }
   
   @media screen and (max-width: 1536px) {
