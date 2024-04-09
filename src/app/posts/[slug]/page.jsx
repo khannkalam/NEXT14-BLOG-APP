@@ -1,52 +1,62 @@
+import Menu from "@/components/Menu/Menu";
+import styles from "./singlePage.module.css";
+import Image from "next/image";
+import Comments from "@/components/comments/Comments";
 
-import Menu from "@/components/menu/Menu"
-import styles from "./singlePage.module.css"
+const getData = async (slug) => {
+  const res = await fetch(`http://localhost:3000/api/posts/${slug}`, {
+    cache: "no-store",
+  });
 
+  if (!res.ok) {
+    throw new Error("Failed");
+  }
 
-import React from 'react'
-import Image from "next/image"
-import Comments from "@/components/comments/Comments"
+  return res.json();
+};
 
-const Singlepage = () => {
+const SinglePage = async ({ params }) => {
+  const { slug } = params;
+
+  const data = await getData(slug);
+
   return (
     <div className={styles.container}>
-     <div className={styles.infoContainer}>
-    <div className={styles.textContainer}>
-    <h1 className={styles.title}>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-    <div className={styles.user}>
-    <div className={styles.userImageContainer}>
-        <Image src="/image.jpg" alt fill className={styles.avatar}/>
-    </div>
-    <div className={styles.userTextContainer}>
-        <span className={styles.username}> shobhit Sheffard </span>
-        <span className={styles.date}> 04.04.2024 </span>
-    </div>    
-    </div>
-    </div>
-    <div className={styles.imageContainer}>
-    <Image src="/image.jpg" alt fill className={styles.image}/>    
-    </div>    
-    </div>   
+      <div className={styles.infoContainer}>
+        <div className={styles.textContainer}>
+          <h1 className={styles.title}>{data?.title}</h1>
+          <div className={styles.user}>
+            {data?.user?.image && (
+              <div className={styles.userImageContainer}>
+                <Image src={data.user.image} alt="" fill className={styles.avatar} />
+              </div>
+            )}
+            <div className={styles.userTextContainer}>
+              <span className={styles.username}>{data?.user.name}</span>
+              <span className={styles.date}>01.01.2024</span>
+            </div>
+          </div>
+        </div>
+        {data?.img && (
+          <div className={styles.imageContainer}>
+            <Image src={data.img} alt="" fill className={styles.image} />
+          </div>
+        )}
+      </div>
       <div className={styles.content}>
         <div className={styles.post}>
-        <div className={styles.description}>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error adipisci nihil quos officiis, at debitis voluptatum, nemo repellendus doloremque quasi blanditiis aliquid saepe, molestiae enim. A autem sunt corrupti rerum eum architecto excepturi veritatis accusamus delectus, minima saepe cupiditate harum temporibus mollitia nulla. Quae, tenetur asperiores. Non beatae magnam a ducimus minima quo dolorum recusandae, enim in, eius sed dolore sequi? Animi minima non dolorum ratione, saepe qui consequatur sapiente at reprehenderit tempora assumenda mollitia eum alias obcaecati inventore ea velit consequuntur voluptates? Perferendis quae consequatur nobis natus enim reiciendis maxime, molestias error porro! Aliquid perferendis incidunt temporibus quasi distinctio?
-        </p>
-        <h2 className="" > Lorem ipsum dolor sit amet consectetur.</h2>
-        
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error adipisci nihil quos officiis, at debitis voluptatum, nemo repellendus doloremque quasi blanditiis aliquid saepe, molestiae enim. A autem sunt corrupti rerum eum architecto excepturi veritatis accusamus delectus, minima saepe cupiditate harum temporibus mollitia nulla. Quae, tenetur asperiores. Non beatae magnam a ducimus minima quo dolorum recusandae, enim in, eius sed dolore sequi? Animi minima non dolorum ratione, saepe qui consequatur sapiente at reprehenderit tempora assumenda mollitia eum alias obcaecati inventore ea velit consequuntur voluptates? Perferendis quae consequatur nobis natus enim reiciendis maxime, molestias error porro! Aliquid perferendis incidunt temporibus quasi distinctio?
-
-        </p>
-
+          <div
+            className={styles.description}
+            dangerouslySetInnerHTML={{ __html: data?.desc }}
+          />
+          <div className={styles.comment}>
+            <Comments postSlug={slug}/>
+          </div>
         </div>
-        <div className={styles.comments}>
-         <Comments/>   
-        </div>
-        </div>
-        <Menu/>
+        <Menu />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Singlepage
+export default SinglePage;
