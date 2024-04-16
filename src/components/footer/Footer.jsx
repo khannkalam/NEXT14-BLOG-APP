@@ -12,10 +12,7 @@ const Footer = () => {
           <h1 className={styles.logoText}>Pixel Planet</h1>
         </div>
         <p className={styles.desc}>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim
-          necessitatibus similique aspernatur obcaecati veritatis. Aperiam cum
-          porro sequi, totam minima consequuntur, aspernatur deleniti vero
-          repellendus dorales.
+        Welcome to Pixel PLanet, your ultimate source for all things gaming! From reviews to news and discussions, we've got you covered. Join our community as we explore the latest releases, uncover hidden gems, and celebrate the vibrant world of gaming!
         </p>
         <div className={styles.icons}>
           <Image src="/facebook.png" alt="" width={20} height={20} />
@@ -28,23 +25,23 @@ const Footer = () => {
         <div className={styles.list}>
           <span className={styles.listTitle}>Links</span>
           <Link href="/">Home</Link>
-          <Link href="/">Blog</Link>
-          <Link href="/">About</Link>
-          <Link href="/">Contact</Link>
+          <Link href="/blog">Blog</Link>
+          <Link href="/about">About</Link>
+          <Link href="/contact">Contact</Link>
         </div>
         <div className={styles.list}>
           <span className={styles.listTitle}>Tags</span>
-          <Link href="/">Valorant</Link>
-          <Link href="/">Gta V</Link>
-          <Link href="/">Warzone</Link>
-          <Link href="/">Fifa</Link>
+          <Link href="/blog?cat=fps">Valorant</Link>
+          <Link href="/blog?cat=open_World">Gta V</Link>
+          <Link href="/blog?cat=arcade">Tekken</Link>
+          <Link href="/blog?cat=sports">Fifa</Link>
         </div>
         <div className={styles.list}>
           <span className={styles.listTitle}>Social</span>
-          <Link href="/">Facebook</Link>
-          <Link href="/">Instagram</Link>
-          <Link href="/">Github</Link>
-          <Link href="/">Linkedin</Link>
+          <Link href="https://facebook.com">Facebook</Link>
+          <Link href="https://instagram.com">Instagram</Link>
+          <Link href="https://github.com">Github</Link>
+          <Link href="https://linkedin.com">Linkedin</Link>
         </div>
       </div>
     </div>

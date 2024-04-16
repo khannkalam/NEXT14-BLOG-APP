@@ -12,7 +12,7 @@ const MenuCategories = () => {
         Fps
       </Link>
       <Link href="/blog?cat=Open_World" className={`${styles.categoryItem} ${styles.openworld}`}>
-        Open World
+        Open Worlds
       </Link>
       <Link href="/blog?cat=Story_Mode" className={`${styles.categoryItem} ${styles.storymode}`}>
         Story Mode
