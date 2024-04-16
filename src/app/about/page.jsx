@@ -1,5 +1,5 @@
 
-import Menu from "@/components/menu/Menu";
+import Menu from "@/components/menu/MenuPage";
 import styles from "./about.module.css";
 import Image from "next/image";
 

@@ -1,7 +1,8 @@
-import Menu from "@/components/Menu/Menu";
+
 import styles from "./singlePage.module.css";
 import Image from "next/image";
 import Comments from "@/components/comments/Comments";
+import MenuPage from "@/components/menu/MenuPage";
 
 
 const getData = async (slug) => {
@@ -54,7 +55,7 @@ const SinglePage = async ({ params }) => {
             <Comments postSlug={slug}/>
           </div>
         </div>
-        <Menu />
+        <MenuPage />
       </div>
     </div>
   );
