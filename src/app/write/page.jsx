@@ -4,6 +4,7 @@ import Image from "next/image";
 import styles from "./write.module.css";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import ReactQuill from "react-quill";
 import { useSession } from "next-auth/react";
 import {
   getStorage,
